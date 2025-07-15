@@ -1,0 +1,28 @@
+실제 C++ 시스템 프로젝트 구조 예시:
+
+my_system/
+├── src/                    # 소스 코드
+│   ├── main.cpp           # 메인 프로그램
+│   ├── core/              # 핵심 기능
+│   │   ├── database.cpp
+│   │   ├── network.cpp
+│   │   └── utils.cpp
+│   ├── ui/                # 사용자 인터페이스
+│   │   ├── window.cpp
+│   │   ├── button.cpp
+│   │   └── menu.cpp
+│   └── backend/           # 백엔드 기능
+│       ├── server.cpp
+│       ├── api.cpp
+│       └── auth.cpp
+├── include/               # 헤더 파일들
+│   ├── core/
+│   ├── ui/
+│   └── backend/
+├── lib/                   # 외부 라이브러리
+├── build/                 # 빌드 결과물
+├── tests/                 # 테스트 코드
+├── docs/                  # 문서
+├── CMakeLists.txt         # CMake 설정
+├── Makefile              # Make 빌드 스크립트
+└── README.md             # 프로젝트 설명 
