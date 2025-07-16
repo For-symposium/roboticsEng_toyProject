@@ -40,4 +40,13 @@ void AddressBook::deleteContactByName(const std::string& name) {
 
 const std::vector<Contact>& AddressBook::getContacts() const {
     return contacts;
+}
+
+// JSON 변환 메서드 구현
+nlohmann::json AddressBook::toJson() const {
+    nlohmann::json j = nlohmann::json::array();
+    for (const auto& contact : contacts) {
+        j.push_back(contact.toJson());
+    }
+    return j;
 } 

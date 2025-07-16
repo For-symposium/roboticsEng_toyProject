@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <nlohmann/json.hpp>  // JSON 라이브러리 헤더 추가
 
 class Contact {
 private:
@@ -20,4 +21,7 @@ public:
     std::string getPhone() const;
     std::string getEmail() const;
     std::string getAddress() const;
+    
+    // JSON 변환 메서드 추가
+    nlohmann::json toJson() const;
 }; 

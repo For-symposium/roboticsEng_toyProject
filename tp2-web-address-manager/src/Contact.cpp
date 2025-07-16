@@ -39,4 +39,14 @@ std::string Contact::getEmail() const {
 
 std::string Contact::getAddress() const {
     return address;
+}
+
+// JSON 변환 메서드 구현
+nlohmann::json Contact::toJson() const {
+    nlohmann::json j;
+    j["name"] = name;
+    j["phone"] = phone;
+    j["email"] = email;
+    j["address"] = address;
+    return j;
 } 

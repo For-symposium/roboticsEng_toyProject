@@ -1,0 +1,14 @@
+curl -X [HTTP메서드] [URL] -H "Content-Type: application/json" -d '[JSON데이터]'
+
+-X 옵션으로 HTTP 메서드를 명시합니다 (GET, POST, PUT, DELETE)
+-H 옵션으로 헤더를 설정합니다 (JSON 데이터를 보낼 때 필수)
+-d 옵션으로 요청 본문(body)을 전송합니다 (JSON 형식의 데이터)
+
+curl -X GET http://localhost:18080/api/contacts
+curl -X POST http://localhost:18080/api/contacts -H "Content-Type: application/json" -d '{"name": "Daniel B", "phone": "010-1111-2222", "email": "danielb@example.com", "address": "Gwacheon"}'
+curl -X GET "http://localhost:18080/api/contacts/John%20Smith"
+curl -X PUT "http://localhost:18080/api/contacts/John%20Smith" \
+  -H "Content-Type: application/json" \
+  -d '{"phone": "999-888-7777", "address": "San Francisco"}'
+curl -X DELETE "http://localhost:18080/api/contacts/Jane%20Doe"
+
