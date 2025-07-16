@@ -3,3 +3,5 @@ build/
 
 # VSCode configuration
 .vscode/
+
+vcpkg/
